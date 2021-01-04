@@ -1,4 +1,5 @@
 % plotting sequences of points
+%hello world
 %% constants
 K = 20;
 sig = 1;
