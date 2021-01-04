@@ -5,7 +5,6 @@ sig = 1;
 beta = .5;
 %% main loop: t =0 while (t < 1 ): 
 % t = t + deltat
-% learn Git VCS (version control software)
 % put this on github in a public repository 
 % visualizing: use hold for graphics, OR save all 
 % configurations, plot at the end (probably better)
