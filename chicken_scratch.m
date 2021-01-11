@@ -1,21 +1,23 @@
 % plotting sequences of points
 %% constants
-K = 20;
+K = 200;
 sig = 1;
-beta = .5;
+beta = .2;
 
-% visualizing: use hold for graphics, OR save all 
-% configurations, plot at the end (probably better)
-% optimize: remove all the loops in k
+% - visualize better
+% - optimize: remove all the loops in k
+% - study flocks on surfaces: instead of putting birds in the plane,
+% we would put them on a surface: torus, sphere, etc
 %% Initialization :Random positions, Random Velocities
 dim = 2;
-k = 10000; % number of birds in a flock
+k = 20; % number of birds in a flock
  % velocities of the birds
 v_new = randn(dim,k);  % new velocities
 pos_new = 1000*rand(dim,k); % positions of birds
  % positions of birds
 deltat = 2e-1; % time step
 eta = @(x,K,beta) K/(sig^2 + x)^beta;
+T = 10; %T = time stopped
 
 %% Matrix A
 A = zeros(k, k);
@@ -23,7 +25,7 @@ A = zeros(k, k);
 %% main loop: t =0 while (t < 1 ): 
 % t = t + deltat
 t=0;
-while (t<1)
+while (t<T)
     t = t+deltat;
     pos = pos_new;
     for i=1:k
