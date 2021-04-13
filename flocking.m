@@ -14,6 +14,7 @@ beta = .3;
 
 %% Initialization: Random positions, Random Velocities
 dim = 2;
+k = 200;
 L = 100;                               % size of the starting box
 
 v_new = L*randn(dim,k);                 % initial velocities
